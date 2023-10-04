@@ -12,7 +12,7 @@ const ZoomTools: React.FC<ZoomToolsProps> = ({ zoomFactor, zoomIn, zoomOut, hand
     const zoomPercent = Math.round(zoomFactor * 100);
     return (
         <div className="zoom-container">
-            <button onClick={zoomIn}>+</button>
+            <button onClick={zoomIn} disabled={zoomPercent >= 130}>+</button>
             <select value={zoomPercent} onChange={(e) => handleZoomChange(Number(e.target.value))}>
                 <option value={70}>70%</option>
                 <option value={80}>80%</option>
@@ -22,7 +22,7 @@ const ZoomTools: React.FC<ZoomToolsProps> = ({ zoomFactor, zoomIn, zoomOut, hand
                 <option value={120}>120%</option>
                 <option value={130}>130%</option>
             </select>
-            <button onClick={zoomOut}>-</button>
+            <button onClick={zoomOut} disabled={zoomPercent <= 70}>-</button>
         </div>
     );
 };

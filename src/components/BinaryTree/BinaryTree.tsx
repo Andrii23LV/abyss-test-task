@@ -51,7 +51,7 @@ const BinaryTree: React.FC<BinaryTreeProps> = (
                         <div className='item-tools'>
                             <button type='button' onClick={(e) => handleEditing(node.id, e)}>cancel</button>
                             <button type='submit' onClick={() => {
-                                editChildNode(rootNode, node.parentId, node.id, value);
+                                editChildNode(rootNode, node.parentId, node.id, value !== '' ? value : node.value);
                                 handleValueChange('')
                             }}
                             >
@@ -70,8 +70,9 @@ const BinaryTree: React.FC<BinaryTreeProps> = (
                                     </button>
                                 </React.Fragment> : null}
                         </div>
-                    )}
-                </form>
+                    )
+                    }
+                </form >
 
                 <div className="connections">
                     {node?.children?.map((child) => (
@@ -94,7 +95,7 @@ const BinaryTree: React.FC<BinaryTreeProps> = (
                     ) : null}
                 </div>
 
-            </div>
+            </div >
         );
     };
 

@@ -1,0 +1,24 @@
+.choose-container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	background-color: white;
+	border-radius: 5px;
+
+	padding: 15px;
+
+    position: absolute;
+    margin-top: 35px;
+}
+
+.choose-container--buttons {
+	display: flex;
+
+	justify-content: space-around;
+}
+
+.choose-container--buttons button{
+	padding: 5px 10px;
+    border: none;
+}

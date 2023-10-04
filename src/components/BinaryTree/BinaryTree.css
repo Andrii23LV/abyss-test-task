@@ -1,0 +1,71 @@
+.binary-tree {
+  width: 100%;
+  max-width: 80vw;
+
+  margin: auto;
+  margin-top: 20px;
+}
+.draggable {
+  cursor: move; /* Set the cursor to 'move' when draggable */
+}
+
+.node {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  gap: 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.item-tools {
+  display: flex;
+  flex-direction: row;
+
+  gap: 3px;
+}
+
+.value, .no-value, .first-value {
+  height: 20px;
+  width: fit-content;
+  max-width: 150px;
+  min-width: 100px;
+  padding: 5px 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.value {
+  border: 1px solid gray;
+  background-color: rgb(255, 211, 131);
+}
+
+.first-value {
+  border: 1px dashed gray;
+  background-color: white;
+}
+
+
+.connections {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  gap: 20px;
+}
+
+
+/* .vertical-line{
+  width: 1px;
+  height: 20px;
+  background-color: black;
+  position:relative;
+} */
